@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ <meta charset="">
+ <title>Program za racunanje zapremine valjka</title>
+</head>
+
+<body>
+ <h1>Izračunavanje zapremine valjka</h1>
+ <form>
+  <label for="radius">Poluprecnik osnove valjka (r): </label>
+  <input type="text" id="radius" name="radius"><br><br>
+  <label for="height">Visina valjka (H): </label>
+  <input type="text" id="height" name="height"><br><br>
+ </form>
+ <br><br>
+
+ <div id="result" style="display: block;">
+  <button onclick="showAlert()">Izracunaj</button>
+  <span id="volume"></span>
+ </div>
+
+ <script>
+  function showAlert() {
+   var radius = document.getElementById("radius").value;
+   var height = document.getElementById("height").value;
+   var volume = Math.PI * radius * radius * height;
+
+   document.getElementById("volume").innerHTML = volume;
+   document.getElementById("result").style.display = "";
+  }
+ </script>
+</body>
+
+</html>
